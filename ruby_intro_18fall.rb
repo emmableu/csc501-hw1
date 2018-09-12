@@ -72,7 +72,7 @@ class Book
       @name, @price = name, price
       raise ArgumentError if name == nil || name.empty? || price == nil || price <= 0
     rescue ArgumentError
-      puts "ArgumentError"
+    #   puts "ArgumentError"
 
     end
   end
@@ -117,8 +117,12 @@ class Book
       j = price.sub(/(\d)*\.0/, "")
       if i.to_i == 1 && j.to_i == 1
         format_price = "#{i} dollar and #{j} cent only"
+      elsif i.to_i == 1 && j.to_i == 0
+        format_price = "#{i} dollar"
       elsif i.to_i > 1 && j.to_i == 1
         format_price = "#{i} dollars and #{j} cent only"
+      elsif i.to_i > 1 && j.to_i == 0
+        format_price = "#{i} dollars"
       elsif i.to_i == 1 && j.to_i > 1
         format_price = "#{i} dollar and #{j} cents only"
       else
@@ -131,7 +135,7 @@ class Book
       if i.to_i == 1
         format_price = "#{i} dollar and #{j} cents only"
       else
-        format_price = "#{i} dollar and #{j} cents only"
+        format_price = "#{i} dollars and #{j} cents only"
       end
 
     else
@@ -145,3 +149,5 @@ class Book
   end
 
 end
+
+# b2 = Book.new("The Great Gatsby", -1)
