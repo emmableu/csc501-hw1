@@ -63,8 +63,53 @@ def highest_frequency_word(s)
   return freq_dict.max_by{|k, v| v}[0]
 end
 
-# Part 3
-#
-# class Book
-#   # ADD YOUR CODE HERE
-# end
+module Format
+  def raise_error(name, price)
+    if (price == nil || price <= 0 || name.to_s.empty?)
+      raise ArgumentError
+    end
+  end
+
+  def num2phrase(num, measure)
+    if measure == "cent"
+      num = (100*(num - num.floor)).round
+    else
+      num = num.floor
+    end
+    if num == 0
+      return nil
+    elsif num == 1
+      return num.to_s << " " +measure + " "
+    else
+      return num.to_s << " " +measure + "s "
+    end
+  end
+end
+
+
+
+
+class Book
+  attr_reader :name, :price
+  include Format
+  def initialize(name, price)
+    @name = name
+    @price = price
+    raise_error(name, price)
+  end
+
+  def name=(name)
+    @name = name
+  end
+
+  def price=(price)
+    @price = price
+  end
+
+  def formatted_price
+    print(num2phrase(price, "dollar"))
+    print("and "*((price >1 && (100*(price - price.floor)).round !=0)? 1:0))
+    print(num2phrase(price, "cent"))
+  end
+
+ end
