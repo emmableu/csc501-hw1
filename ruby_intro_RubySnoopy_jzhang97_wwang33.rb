@@ -216,11 +216,11 @@ class Book
 #       if i.to_i == 1 && j.to_i == 1
 #         format_price = "#{i} dollar and #{j} cent only"
 #       elsif i.to_i == 1 && j.to_i == 0
-#         format_price = "#{i} dollar"
+#         format_price = "#{i} dollar only"
 #       elsif i.to_i > 1 && j.to_i == 1
 #         format_price = "#{i} dollars and #{j} cent only"
 #       elsif i.to_i > 1 && j.to_i == 0
-#         format_price = "#{i} dollars"
+#         format_price = "#{i} dollars only"
 #       elsif i.to_i == 1 && j.to_i > 1
 #         format_price = "#{i} dollar and #{j} cents only"
 #       else
