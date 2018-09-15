@@ -117,7 +117,7 @@ module Format
       num = num.floor
     end
     if num == 0
-      return nil
+      return ""
     elsif num == 1
       return num.to_s << " " +measure + " "
     else
@@ -138,6 +138,14 @@ class Book
     raise_error(name, price)
   end
 
+  def getName
+    @name
+  end
+
+  def getPrice
+    @price
+  end
+
   def name=(name)
     @name = name
   end
@@ -147,9 +155,10 @@ class Book
   end
 
   def formatted_price
-    print(num2phrase(price, "dollar"))
-    print("and "*((price >1 && (100*(price - price.floor)).round !=0)? 1:0))
-    print(num2phrase(price, "cent"))
+    format_price = 0
+    format_price = (num2phrase(price, "dollar"))+("and "*((price >1 && (100*(price - price.floor)).round !=0)? 1:0))+
+    (num2phrase(price, "cent")) + "only"
+    return format_price
   end
 
  end
