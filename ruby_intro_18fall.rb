@@ -1,3 +1,23 @@
+# research article recommendation engine
+
+As a leading international financial service company, Credit Suisse provides innovative and tailored strategies to its clients around the world. Thousands of high-quality research articles, including subjects of industries, stock markets, and macro-economics are written everyday by specialists in different areas within the bank. Among the various set of articles, we need to provide our client with the most personalized set of ideas and advises. 
+
+Credit Suisse Research Recommendation Engine Team has generated a list of features - tags that describe the article in numerous different aspect. However, different clients' reading history displays different behavioral patterns. How do we weight each feature's impact on a client? What if a client's preference on a certain set of features change over time - for example, something that attracted him one year ago disengages him now? And the final question - based on our client taste, how can we recommend them with the best match of articles?
+
+
+
+Credit Suisse Research Recommendation Engine Team wants you to help them with the following questions:
+
+1. How can we identify each article by its own composition of weighted features? Using binary, categorical or numerical data, how can we describe a feature's presence in an article, or the extent to which the article is shaped by that feature? You can start by manually tagging the articles from the feature list and assign them the corresponding weights. Using such "training articles", can you help us find a way to automatically generate such weighted features in order to represent the articles?
+2. After finding out such "weighted article feature compositions", we need to use them, as well as our client's behavioral data, to quantify our clients' tastes. A client might have a specific need for a kind of article during a specific period of time, but what are the articles that interests him most **now**? Think creatively, and decide whether you want to group them into different "taste groups", or you might want to use some "interest level"  data combination to identify each different clients.
+3. Now that you have a way to quantify each articles as well as each client, you can think about using such data, to make a recommendation of the combination of articles! What kind of articles should be displayed at the front page of our clients?
+
+You will be provided with our clients' browsing history data, the feature list of research articles, as well as some untagged articles.
+
+
+
+
+
 # Part 1
 
 def unique_array(a)
