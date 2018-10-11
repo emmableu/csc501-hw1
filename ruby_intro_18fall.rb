@@ -1,3 +1,16 @@
+As a leading international financial service company, Credit Suisse designs tailored strategies and innovative solutions for its clients around the world. In order to offer each unique client with the most personalized ideas and advices, the best match of articles is expected to be picked for each and every one of our clients.
+
+Accurate and personalized recommendation system offers clients with convenience, quality reading experience, and effectiveness. Netflix and Youtube, who has spent prodigious effort in their recommendation engines, has made their users' attention and attachment glued to their products - products that talks with them, provide them with what they need. To approach this goal, Credit Suisse Research Recommendation Engine Team has generated a list of features - tags that describes an article. However, clients' reading history displays various behavioral patterns. Same feature is of different values in  clients. - based on our client taste, how can we recommend them with the best match of articles?
+
+In order to address this overarching question, Credit Suisse Research Recommendation Engine Team wants you to help them with the following three studies:
+
+1. How to identify each article by its own composition of weighted features? By using binary, categorical or numerical data, describe a feature's presence or importance in an article, in terms of the extent to which the article is shaped by that feature. A model can be built starting from manually tagging the articles and assigning them the corresponding weights. Using such model, automatic generation for the "weighted feature composition" of each input article is expected.
+2. How to quantify clients' "taste", using historical behavioral data? Clients' reading history reveals their preferences on topics and other article features, but features that attracts the client a year ago might disengages him now. Would it be necessary to group the clients into different "taste groups"? Or is there any "interest level"  data combination to be utilized, to identify each client?
+3. With quantified data to represent each client and each article, a recommendation of a set of articles is expected to be presented. What kind of articles should be displayed at the front page of our clients?
+
+You will be provided with our clients' reading history data, the feature list of research articles, as well as some untagged articles.
+
+
 # research article recommendation engine
 
 As a leading international financial service company, Credit Suisse provides innovative and tailored strategies to its clients around the world. Thousands of high-quality research articles, including subjects of industries, stock markets, and macro-economics are written everyday by specialists in different areas within the bank. Among the various set of articles, we need to provide our client with the most personalized set of ideas and advises. 
